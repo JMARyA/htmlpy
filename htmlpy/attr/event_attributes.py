@@ -1,4 +1,4 @@
-from fn.fn import attribute
+from htmlpy.fn import attribute
 
 class EventAttributes:
     def __init__(self, 

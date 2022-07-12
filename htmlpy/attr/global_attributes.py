@@ -1,4 +1,4 @@
-from fn.fn import attribute
+from htmlpy.fn import attribute
 
 class GlobalAttributes:
     def __init__(self, css_class=None, hidden=False, id=None, style=None):

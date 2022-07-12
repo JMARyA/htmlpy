@@ -1,6 +1,6 @@
-from attributes.global_attributes import GlobalAttributes
-from attributes.event_attributes import EventAttributes
-from fn.fn import to_code, attribute, clean_format
+from htmlpy import GlobalAttributes
+from htmlpy import EventAttributes
+from htmlpy.fn import to_code, attribute, clean_format
 
 class Source:
 

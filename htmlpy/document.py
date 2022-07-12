@@ -1,5 +1,5 @@
-from tags.head import Head
-from tags.body import Body
+from htmlpy.tags.head import Head
+from htmlpy.tags.body import Body
 
 class Document:
     head: Head
