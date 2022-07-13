@@ -7,7 +7,7 @@ class EventAttributes:
     # Form Events
     onblur=None, onchange=None, onfocus=None, oninput=None, oninvalid=None, onsearch=None, onselect=None, onsubmit=None,
     # Mouse Events
-    onclick=None, onmouseover=None
+    onclick=None, onmouseover=None, onmouseout=None
         ):
         self.onload = onload
         self.onresize = onresize
@@ -23,6 +23,7 @@ class EventAttributes:
 
         self.onclick = onclick
         self.onmouseover = onmouseover
+        self.onmouseout = onmouseout
 
     def _attributes(self):
         attr = ""
@@ -40,4 +41,5 @@ class EventAttributes:
 
         attr += attribute("onclick", self.onclick)
         attr += attribute("onmouseover", self.onmouseover)
+        attr += attribute("onmouseout", self.onmouseout)
         return attr
