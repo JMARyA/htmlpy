@@ -268,6 +268,7 @@ class Input:
                  readonly=False,
                  required=True,
                  name=None,
+                 placeholder=None,
                  minNumber=None,
                  maxNumber=None,
                  minlength=None,
@@ -284,6 +285,7 @@ class Input:
         self.readonly = readonly
         self.required = required
         self.name = name
+        self.placeholder = placeholder
         self.minNum = minNumber
         self.maxNum = maxNumber
         self.minlength = minlength
@@ -299,6 +301,7 @@ class Input:
         code += attribute("readonly", self.readonly)
         code += attribute("required", self.required)
         code += attribute("name", self.name)
+        code += attribute("placeholder", self.placeholder)
         code += attribute("min", self.minNum)
         code += attribute("max", self.maxNum)
         code += attribute("minlength", self.minlength)

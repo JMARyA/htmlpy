@@ -2,6 +2,18 @@ from htmlpy import GlobalAttributes
 from htmlpy import EventAttributes
 from htmlpy.fn import to_code, clean_format
 
+class ThematicBreak:
+
+    def __init__(self,
+                 global_attr=GlobalAttributes(),
+                 event_attr=EventAttributes()):
+        self.global_attr = global_attr
+        self.event_attr = event_attr
+
+    def to_code(self) -> str:
+        code = f"<hr {self.global_attr._attributes()} {self.event_attr._attributes()}>"
+        code = clean_format(code)
+        return code
 
 class LineBreak:
 
