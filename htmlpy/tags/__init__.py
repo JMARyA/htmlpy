@@ -1,4 +1,4 @@
-from .body import Body
+from .body import Body, Header, Footer
 from .head import Head, Title, Meta, Reference
 from .comment import Comment
 from .link import Link
