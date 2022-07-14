@@ -1,4 +1,7 @@
 
+fmt:
+	yapf -ri .
+	
 clean:
 	fd pycache -I -x rm -rv {}
 	rm -rv build dist htmlpy.egg-info

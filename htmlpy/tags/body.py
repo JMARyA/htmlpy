@@ -20,3 +20,37 @@ class Body:
         code += to_code(self.content)
         code += "</body>"
         return code
+
+class Header:
+
+    def __init__(self,
+                 inner,
+                 global_attr=GlobalAttributes(),
+                 event_attr=EventAttributes()):
+        self.global_attr = global_attr
+        self.event_attr = event_attr
+        self.inner = inner
+
+    def to_code(self) -> str:
+        code = f"<header {self.global_attr._attributes()} {self.event_attr._attributes()}>"
+        code = clean_format(code)
+        code += to_code(self.inner)
+        code += "</header>"
+        return code
+
+class Footer:
+
+    def __init__(self,
+                 inner,
+                 global_attr=GlobalAttributes(),
+                 event_attr=EventAttributes()):
+        self.global_attr = global_attr
+        self.event_attr = event_attr
+        self.inner = inner
+
+    def to_code(self) -> str:
+        code = f"<footer {self.global_attr._attributes()} {self.event_attr._attributes()}>"
+        code = clean_format(code)
+        code += to_code(self.inner)
+        code += "</footer>"
+        return code
